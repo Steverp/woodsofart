@@ -1,3 +1,3 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+generic_category:
+    path: /generic-save-category
+    controller: App\Controller\TestController::generateDocs
