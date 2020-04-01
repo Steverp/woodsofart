@@ -26,7 +26,7 @@ class Exposition
     protected $description;
 
      /**
-     * @MongoDB\Field(type="datetime")
+     * @MongoDB\Field(type="date")
      */
     protected $expositionDate;
 

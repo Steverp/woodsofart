@@ -26,7 +26,7 @@ class PlanType
     protected $description;
 
      /**
-     * @MongoDB\Field(type="double")
+     * @MongoDB\Field(type="float")
      */
     protected $value;
 

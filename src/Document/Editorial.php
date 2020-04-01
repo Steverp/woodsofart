@@ -16,7 +16,7 @@ class Editorial
     protected $id;
 
      /**
-     * @MongoDB\Field(type=" string")
+     * @MongoDB\Field(type="string")
      */
     protected $editorialName;
 

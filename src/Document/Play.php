@@ -41,7 +41,7 @@ class Play
     protected $description;
 
       /**
-     * @MongoDB\Field(type="int")
+     * @MongoDB\Field(type="float")
      */
     protected $price;
 

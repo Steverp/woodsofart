@@ -21,12 +21,12 @@ class Sale
     protected $userId;
 
      /**
-     * @MongoDB\Field(type=" int")
+     * @MongoDB\Field(type="float")
      */
     protected $totalValue;
 
      /**
-     * @MongoDB\Field(type=" int")
+     * @MongoDB\Field(type="float")
      */
     protected $totalItems;
 

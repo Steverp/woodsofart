@@ -15,13 +15,13 @@ class UserPlan
      */
     protected $id;
 
-    /**
-     * @MongoDB\Field(type=" User")
+     /**
+     * @MongoDB\EmbedOne(targetDocument="User")
      */
     protected $userId;
-
+ 
      /**
-     * @MongoDB\Field(type=" PlanType")
+     * @MongoDB\EmbedOne(targetDocument="PlanType")
      */
     protected $planTypeId;
 

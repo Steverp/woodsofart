@@ -45,8 +45,8 @@ class User
      */
     protected $presentation;
 
-     /**
-     * @MongoDB\Field(type="int")
+      /**
+     * @MongoDB\EmbedOne(targetDocument="City")
      */
     protected $cityId;
 

@@ -26,7 +26,7 @@ class Invoice
     protected $playId;
 
      /**
-     * @MongoDB\Field(type="int")
+     * @MongoDB\Field(type="float")
      */
     protected $totalPrice;
 
