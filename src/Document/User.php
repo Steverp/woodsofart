@@ -3,11 +3,11 @@
 namespace App\Document;
 
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
-
+use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * @MongoDB\Document
  */
-class User
+class User implements UserInterface
 {
 
     /**
@@ -24,6 +24,11 @@ class User
      * @MongoDB\Field(type="string")
      */
     protected $username;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    protected $password;
 
     /**
      * @MongoDB\Field(type="int")
@@ -64,6 +69,15 @@ class User
      * @MongoDB\Field(type="string")
      */
     protected $zipCode;
+
+    /**
+     * User constructor.
+    * @param $username
+    */
+    public function __construct($username)
+    {
+    $this->username = $username;
+    }
 
     /**
      * Get id
@@ -306,5 +320,42 @@ class User
         $this->zipCode = $zipCode;
 
         return $this;
+    }
+
+    /**
+     * @return string|null
+    */
+    public function getSalt()
+    {
+    return null;
+    }
+
+
+    /**
+     * @return string|null
+    */
+    public function getPassword()
+    {
+    return $this->password;
+    }
+
+    /**
+     * @param $password
+    */
+    public function setPassword($password)
+    {
+    $this->password = $password;
+    }
+
+     /**
+     * @return array|string[]
+    */
+    public function getRoles()
+    {
+    return array('ROLE_USER');
+    }
+
+    public function eraseCredentials()
+    {
     }
 }

@@ -38,7 +38,7 @@ class TestController extends AbstractController
     public function generateDocs()
     {
         try {
-            $this->category();
+         /*   $this->category();
             $this->department();
             $this->city();
             //----
@@ -58,7 +58,7 @@ class TestController extends AbstractController
 
             //---
             $this->sale();
-            $this->invoice();
+            $this->invoice(); */
 
 
             return new JsonResponse(array('Status' => 'documentos generados con éxito'));
